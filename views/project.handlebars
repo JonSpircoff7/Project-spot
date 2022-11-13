@@ -1,14 +1,18 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
+<div>
+  <div class="card" style="width: 18rem;">
+    <img src="../public/image-1.gif" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text">{{description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Created by {{user.name}}</li>
+      <li class="list-group-item">{{format_date date_created}}</li>
+      <li class="list-group-item">{{format_amount needed_funding}}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Contribute </a>
+      <a href="#" class="card-link">READ About</a>
+    </div>
+  </div>
 </div>
