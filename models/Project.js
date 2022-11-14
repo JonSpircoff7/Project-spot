@@ -18,7 +18,7 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
-    date_created: {
+    created_at: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
@@ -34,6 +34,19 @@ Project.init(
         key: 'id',
       },
     },
+    pledged: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+
+    },
+    currency: {
+      type: DataTypes.STRING,
+    },
+    deadline: {
+      type:DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    }
   },
   {
     sequelize,
