@@ -26,32 +26,28 @@ nav a {
     1px 4px 3px #9d9d9f, 1px 5px 3px #00599e, 1px 6px 3px rgba(16, 16, 16, 0.4),
     1px 7px 2px rgba(0, 27, 91, 0.2), 1px 5px 10px rgba(0, 27, 91, 0.2),
     1px 15px 10px rgba(0, 27, 91, 0.2);
-  color: #20AAD4;
+  color: #20aad4;
 }
-
-.homepage {
-  border-radius: 15px;
-  background-repeat: repeat;
-  /* Full height */
+/* Homepage background */
+.homepage,
+.loginpage,
+.terms {
   width: 100%;
   height: 100%;
-  background-image: url(../images/DIRECTUS.mp4);
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-
+/* Homepage background image */
+.homepage {
+  background-image: url(../images/DIRECTUS.mp4);
+}
+/* Loginpage and SIGNup background */
 .loginpage {
   background: url(../images/original-bfd629edbc5919d3768b1f1c95e988e5.gif);
-  /* Full height */
-  width: 100%;
-  height: 100%;
-
-  /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+/* TERMSpage background */
+.terms {
+  background: url(../images/terms.png);
 }
 
 h1 a.title {
@@ -63,7 +59,7 @@ h1 a.title {
     1px 4px 3px #9d9d9f, 1px 5px 3px #00599e, 1px 6px 3px rgba(16, 16, 16, 0.4),
     1px 7px 2px rgba(0, 27, 91, 0.2), 1px 5px 10px rgba(0, 27, 91, 0.2),
     1px 15px 10px rgba(0, 27, 91, 0.2);
-  color: #20AAD4;
+  color: #20aad4;
 }
 
 /**
@@ -1353,7 +1349,7 @@ label form [type="radio"] {
   }
 }
 
-/* Login and Signout */
+/* Login and Signout CARDS*/
 .myform {
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1380,6 +1376,7 @@ label form [type="radio"] {
   background-color: #fff;
   width: 50px;
   text-align: center;
+  background-color: transparent;
 }
 .hr-or {
   height: 1px;
@@ -1408,3 +1405,4 @@ form .error {
   border-radius: 25px;
   box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3);
 }
+/* -------END-------*/
