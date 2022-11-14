@@ -91,7 +91,8 @@ Project.init(
       allowNull: false, 
     },
     created_at_day: {
-
+      type: DataTypes.INTEGER,
+      allowNull: false, 
     },
     created_at_yr: {
 
