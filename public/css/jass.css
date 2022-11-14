@@ -16,14 +16,37 @@ main {
   display: block;
 }
 
-.box {
+nav a {
+  margin: 40px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #00599e, 1px 2px 2px #00599e, 1px 3px 3px #00599e,
+    1px 4px 3px #9d9d9f, 1px 5px 3px #00599e, 1px 6px 3px rgba(16, 16, 16, 0.4),
+    1px 7px 2px rgba(0, 27, 91, 0.2), 1px 5px 10px rgba(0, 27, 91, 0.2),
+    1px 15px 10px rgba(0, 27, 91, 0.2);
+  color: #20AAD4;
+}
+
+.homepage {
   border-radius: 15px;
-  background: url(../images/original-bfd629edbc5919d3768b1f1c95e988e5.gif)
-    no-repeat;
   background-repeat: repeat;
   /* Full height */
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/DIRECTUS.mp4);
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loginpage {
+  background: url(../images/original-bfd629edbc5919d3768b1f1c95e988e5.gif);
+  /* Full height */
+  width: 100%;
+  height: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -34,13 +57,13 @@ main {
 h1 a.title {
   margin: 40px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 35px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 1px #424242, 1px 2px 1px #424242, 1px 3px 1px #424242,
-    1px 4px 1px #9d9d9f, 1px 5px 2px #424242, 1px 5px 6px rgba(16, 16, 16, 0.4),
-    1px 7px 10px rgba(16, 16, 16, 0.2), 1px 25px 10px rgba(16, 16, 16, 0.2),
-    1px 15px 10px rgba(16, 16, 16, 0.4);
-  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 3px #00599e, 1px 2px 3px #00599e, 1px 3px 3px #00599e,
+    1px 4px 3px #9d9d9f, 1px 5px 3px #00599e, 1px 6px 3px rgba(16, 16, 16, 0.4),
+    1px 7px 2px rgba(0, 27, 91, 0.2), 1px 5px 10px rgba(0, 27, 91, 0.2),
+    1px 15px 10px rgba(0, 27, 91, 0.2);
+  color: #20AAD4;
 }
 
 /**
@@ -606,7 +629,8 @@ pre {
   outline: none;
   color: #1a1a1a;
   background-color: #aeaeae;
-  transition: color 0.2s ease-in-out;background-color: 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  background-color: 0.2s ease-in-out;
 }
 
 .btn:hover {
@@ -1331,10 +1355,9 @@ label form [type="radio"] {
 
 /* Login and Signout */
 .myform {
-  background-color: purple;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
-
+  box-shadow: 0px 0px 10px rgba(2, 111, 125, 0.461);
 }
 .mybtn {
   border-radius: 10px;
@@ -1378,15 +1401,10 @@ form .error {
   display: none;
 }
 
-.login-bk {
-  width: 100%;
-  padding: 15px;
-}
-
 .form {
-  border: 1px solid black;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3);
 }

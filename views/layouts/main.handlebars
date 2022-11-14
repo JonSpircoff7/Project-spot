@@ -12,37 +12,7 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="background">
-    <div class="box">
-      <div class="flex-column justify-space-around">
-        <header class="display-flex justify-space-between align-center p-2">
-          <h1>
-            <a class="title" href="/">ProjectSpot</a>
-          </h1>
-          <nav>
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-              <a href="/profile">My Account</a>
-              |
-              <button class="no-button" id="logout">Logout</button>
-            {{else}}
-              <a href="/login">Login</a>
-            {{/if}}
-          </nav>
-        </header>
-        <main class="container container-fluid mt-5">
-          <!-- Rendered view -->
-          {{{body}}}
-        </main>
-      </div>
-      <footer>
-
-      </footer>
-    </div>
-
-    <!-- Render script for logged in users only -->
-    {{#if logged_in}}
-      <script src="/js/logout.js"></script>
-    {{/if}}
+    {{{body}}}
   </body>
 
 </html>
