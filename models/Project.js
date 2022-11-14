@@ -83,10 +83,11 @@ Project.init(
       allowNull: false, 
     },
     state_changed_at_hr: {
-
+      type: DataTypes.INTEGER,
+      allowNull: false, 
     },
     created_at_month: {
-
+      
     },
     created_at_day: {
 
