@@ -99,7 +99,8 @@ Project.init(
       allowNull: false, 
     },
     created_at_hr: {
-
+      type: DataTypes.INTEGER,
+      allowNull: false, 
     },
     launched_at_month: {
 
