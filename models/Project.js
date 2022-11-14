@@ -115,7 +115,8 @@ Project.init(
       allowNull: false, 
     },
     launched_at_hr: {
-
+      type: DataTypes.INTEGER,
+      allowNull: false, 
     },
     create_to_launch: {
 
