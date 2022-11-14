@@ -67,7 +67,8 @@ Project.init(
       allowNull: false, 
     },
     deadline_month: {
-
+      type: DataTypes.INTEGER,
+      allowNull: false, 
     },
     deadline_day: {
 
