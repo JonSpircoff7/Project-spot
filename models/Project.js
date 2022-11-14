@@ -79,7 +79,8 @@ Project.init(
       allowNull: false, 
     },
     state_changed_at_yr: {
-
+      type: DataTypes.INTEGER,
+      allowNull: false, 
     },
     state_changed_at_hr: {
 
