@@ -58,10 +58,12 @@ Project.init(
       defaultValue: DataTypes.NOW,
     },
     launched_at: {
-
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     backers_count: {
-
+      
     },
     deadline_month: {
 
