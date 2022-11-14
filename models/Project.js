@@ -119,10 +119,12 @@ Project.init(
       allowNull: false, 
     },
     create_to_launch: {
-
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     launch_to_deadline: {
-
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     create_to_launch_days: {
       type: DataTypes.INTEGER,
