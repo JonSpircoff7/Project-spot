@@ -50,10 +50,12 @@ Project.init(
     state_changed_at: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW
+      defaultValue: DataTypes.NOW,
     },
     created_at: {
-
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
     },
     launched_at: {
 
@@ -77,40 +79,40 @@ Project.init(
 
     },
     created_at_month: {
-      
+
     },
     created_at_day: {
-      
+
     },
     created_at_yr: {
-      
+
     },
     created_at_hr: {
-      
+
     },
     launched_at_month: {
-      
+
     },
     launched_at_day: {
-      
+
     },
     launched_at_yr: {
-      
+
     },
     launched_at_hr: {
-      
+
     },
     create_to_launch: {
-      
+
     },
     launch_to_deadline: {
-      
+
     },
     create_to_launch_days: {
-      
+
     },
     launch_to_deadline_days: {
-      
+
     },
   },
   {
