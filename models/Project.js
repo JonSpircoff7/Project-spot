@@ -19,9 +19,9 @@ Project.init(
       type: DataTypes.STRING,
     },
     created_at: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      // defaultValue: DataTypes.NOW,
     },
     needed_funding: {
       type: DataTypes.FLOAT,
@@ -43,24 +43,19 @@ Project.init(
       type: DataTypes.STRING,
     },
     deadline: {
-      type:DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      // defaultValue: DataTypes.NOW,
     },
     state_changed_at: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    created_at: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
+      // defaultValue: DataTypes.NOW,
     },
     launched_at: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      // defaultValue: DataTypes.NOW,
     },
     backers_count: {
       type: DataTypes.INTEGER,
