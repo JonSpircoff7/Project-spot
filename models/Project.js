@@ -83,5 +83,9 @@ Project.init(
       type: DataTypes.INTEGER, 
       allowNull: false 
       },
+    created_at_hr: { 
+      type: DataTypes.INTEGER, 
+      allowNull: false 
+    },
         
 
