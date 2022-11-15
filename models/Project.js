@@ -49,5 +49,10 @@ Project.init(
     },
     backers_count: { 
       type: DataTypes.INTEGER, 
-      allowNull: false },
+      allowNull: false 
+    },
+    deadline_month: {
+      type: DataTypes.INTEGER, 
+      allowNull: false 
+    },
 
