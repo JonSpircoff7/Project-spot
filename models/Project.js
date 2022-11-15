@@ -12,3 +12,4 @@ Project.init(
       autoIncrement: true,
     },
     name: { type: DataTypes.STRING, allowNull: false },
+    description: { type: DataTypes.STRING },
