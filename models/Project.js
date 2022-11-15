@@ -67,5 +67,8 @@ Project.init(
       type: DataTypes.INTEGER, 
       allowNull: false 
     },
-
+    state_changed_at_hr: { 
+      type: DataTypes.INTEGER, 
+      allowNull: false 
+    },
 
