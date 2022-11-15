@@ -47,4 +47,7 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    backers_count: { 
+      type: DataTypes.INTEGER, 
+      allowNull: false },
 
