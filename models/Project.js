@@ -11,8 +11,25 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: { type: DataTypes.STRING, allowNull: false },
-    description: { type: DataTypes.STRING },
-    needed_funding: { type: DataTypes.FLOAT, allowNull: false },
-    pledged: { type: DataTypes.INTEGER, allowNull: false },
-    currency: { type: DataTypes.STRING },
+    name: { 
+      type: DataTypes.STRING, 
+      allowNull: false 
+    },
+    description: { 
+      type: DataTypes.STRING 
+    },
+    needed_funding: {
+      type: DataTypes.FLOAT, 
+      allowNull: false 
+    },
+    pledged: {
+      type: DataTypes.INTEGER, 
+      allowNull: false 
+    },
+    currency: { type: DataTypes.STRING 
+    },
+    deadline: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
