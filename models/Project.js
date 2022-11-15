@@ -23,16 +23,22 @@ Project.init(
     },
     state_changed_at: {
       type: DataTypes.DATE,
-      allowNull: false
-    },
-    date_created: {
-      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+    },
+    created_at: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      // defaultValue: DataTypes.NOW,
     },
 
     launched_at: {
       type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    needed_funding: {
+      type: DataTypes.FLOAT,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
