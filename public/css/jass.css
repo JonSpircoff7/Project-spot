@@ -5,12 +5,10 @@
 
 body {
   margin: 0;
-  width: 100vw;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
 }
 main {
   display: block;
@@ -22,18 +20,19 @@ nav a {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 1px 1px 2px #00599e, 1px 2px 2px #00599e, 1px 3px 3px #00599e,
-    1px 4px 3px #9d9d9f, 1px 5px 3px #00599e, 1px 6px 3px rgba(16, 16, 16, 0.4),
-    1px 7px 2px rgba(0, 27, 91, 0.2), 1px 5px 10px rgba(0, 27, 91, 0.2),
-    1px 15px 10px rgba(0, 27, 91, 0.2);
-  color: #20aad4;
+  text-shadow: 1px 1px 3px #00599e, 1px 2px 3px #505050, 1px 3px 3px #505050,
+    1px 4px 3px #9d9d9f, 1px 5px 5px rgba(0, 27, 91, 0.2);
+  color: #11e7dc;
 }
 /* Homepage background */
 .homepage,
 .loginpage,
 .terms {
+  margin: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position-y: center;
 }
 /* Homepage background image */
 .homepage {
@@ -41,13 +40,14 @@ nav a {
 }
 /* Loginpage and SIGNup background */
 .loginpage {
-  background: url(../images/original-bfd629edbc5919d3768b1f1c95e988e5.gif);
-  background-position: center;
+  background-image: url(../images/original-bfd629edbc5919d3768b1f1c95e988e5.gif);
+  background-repeat: no-repeat;
 }
 
 /* TERMSpage background */
 .terms {
-  background: url(../images/terms.png);
+  background-image: url(../images/terms.png);
+  background-repeat: no-repeat;
 }
 
 h1 a.title {
@@ -55,11 +55,10 @@ h1 a.title {
   text-decoration: none;
   font-size: 35px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 3px #00599e, 1px 2px 3px #00599e, 1px 3px 3px #00599e,
-    1px 4px 3px #9d9d9f, 1px 5px 3px #00599e, 1px 6px 3px rgba(16, 16, 16, 0.4),
-    1px 7px 2px rgba(0, 27, 91, 0.2), 1px 5px 10px rgba(0, 27, 91, 0.2),
-    1px 15px 10px rgba(0, 27, 91, 0.2);
-  color: #20aad4;
+  text-shadow: 1px 1px 2px #3c3c3c, 1px 2px 2px #3c3c3c, 1px 3px 2px #3c3c3c,
+    1px 4px 2px #3c3c3c, 1px 5px 15px rgba(255, 255, 255, 0.2),
+    1px 5px 10px rgba(255, 255, 255, 0.2);
+  color: #e4389b;
 }
 
 /**
