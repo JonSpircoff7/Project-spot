@@ -59,5 +59,9 @@ Project.init(
       type: DataTypes.INTEGER,
       allowNull: false 
     },
-    
+    deadline_hr: { 
+      type: DataTypes.INTEGER, 
+      allowNull: false 
+    },
+
 
