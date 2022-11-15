@@ -103,7 +103,11 @@ Project.init(
       type: DataTypes.INTEGER, 
       allowNull: false 
     },
-    
+    create_to_launch: { 
+      type: DataTypes.STRING, 
+      allowNull: false 
+    },
+
 
         
 
