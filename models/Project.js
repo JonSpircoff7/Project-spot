@@ -42,3 +42,9 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    launched_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+
