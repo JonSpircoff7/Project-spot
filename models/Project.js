@@ -14,3 +14,4 @@ Project.init(
     name: { type: DataTypes.STRING, allowNull: false },
     description: { type: DataTypes.STRING },
     needed_funding: { type: DataTypes.FLOAT, allowNull: false },
+    pledged: { type: DataTypes.INTEGER, allowNull: false },
