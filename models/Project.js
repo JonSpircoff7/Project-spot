@@ -33,3 +33,7 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    state_changed_at: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
