@@ -1,3 +1,5 @@
+// const Project = require("../../models/Project");
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
@@ -6,7 +8,7 @@ const newFormHandler = async (event) => {
   const description = document.querySelector('#project-desc').value.trim();
 
   if (name && needed_funding && description) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/projects/`, {
       method: 'POST',
       body: JSON.stringify({ name, needed_funding, description }),
       headers: {

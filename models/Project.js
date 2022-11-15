@@ -15,7 +15,7 @@ Project.init(
       type: DataTypes.STRING, 
       allowNull: false 
     },
-    description: { 
+    description: {
       type: DataTypes.STRING 
     },
     needed_funding: {
@@ -24,104 +24,104 @@ Project.init(
     },
     pledged: {
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     currency: { type: DataTypes.STRING 
     },
     deadline: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
       defaultValue: DataTypes.NOW,
     },
     state_changed_at: {
       type: DataTypes.DATE,
-      allowNull: false
+      allowNull: true
     },
     date_created: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
       defaultValue: DataTypes.NOW,
     },
     launched_at: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
       defaultValue: DataTypes.NOW,
     },
     backers_count: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     deadline_month: {
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     deadline_day: {
       type: DataTypes.INTEGER,
-      allowNull: false 
+      allowNull: true 
     },
     deadline_hr: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     state_changed_at_yr: {
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     state_changed_at_hr: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     created_at_month: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     created_at_day: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
       },
     created_at_yr: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
       },
     created_at_hr: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     launched_at_month: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     launched_at_day: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     launched_at_yr: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     launched_at_hr: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     create_to_launch: { 
       type: DataTypes.STRING, 
-      allowNull: false 
+      allowNull: true 
     },
     create_to_launch: { 
       type: DataTypes.STRING, 
-      allowNull: false 
+      allowNull: true 
     },
     launch_to_deadline: { 
       type: DataTypes.STRING, 
-      allowNull: false 
+      allowNull: true 
     },
     create_to_launch_days: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
     launch_to_deadline_days: { 
       type: DataTypes.INTEGER, 
-      allowNull: false 
+      allowNull: true 
     },
   },
   {
