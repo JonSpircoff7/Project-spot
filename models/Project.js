@@ -95,7 +95,12 @@ Project.init(
       type: DataTypes.INTEGER, 
       allowNull: false 
     },
+    launched_at_yr: { 
+      type: DataTypes.INTEGER, 
+      allowNull: false 
+    },
     
+
 
         
 
