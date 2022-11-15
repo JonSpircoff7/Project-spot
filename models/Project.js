@@ -87,5 +87,10 @@ Project.init(
       type: DataTypes.INTEGER, 
       allowNull: false 
     },
+    launched_at_month: { 
+      type: DataTypes.INTEGER, 
+      allowNull: false 
+    },
+    
         
 
