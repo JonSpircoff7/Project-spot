@@ -2,6 +2,25 @@ const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Adding get route for projects.
+router.get('/', async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const projectData = await Project.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }});
+
+
+// Need to add put route as well.
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newProject = await Project.create({
