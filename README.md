@@ -35,8 +35,8 @@
   No tests currently available. If users wish to test the program, they may use it as intended and give feedback.
 
   ## GitHub
-  Click to access our pages: [JonSpircoff7](https://github.com/JonSpircoff7), [Sbullocks](https://github.com/sbullocks), [StyngerBee](https://github.com/StyngerBee), [Zechariahmn](https://github.com/Zechariahmn)
+  Click to access our pages: [JonSpircoff7](https://github.com/JonSpircoff7), [Sbullocks](https://github.com/sbullocks), [StyngerBee](https://github.com/StyngerBee), [Zechariahmn](https://github.com/Zechariahmn) .
 
 
   ## Slack
-  You can find us on slack at: Curran Duke, Jonathan, Stephen Bullocks, Zack
+  You can find us on slack at: Curran Duke, Jonathan, Stephen Bullocks, Zack .
