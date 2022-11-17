@@ -982,6 +982,7 @@ label form [type="radio"] {
   flex-direction: row;
   margin-left: -15px;
   margin-right: -15px;
+  justify-content: center;
 }
 
 [class*="col-"] {
@@ -994,6 +995,7 @@ label form [type="radio"] {
 .col-auto {
   flex-grow: 1;
   flex-basis: 0;
+  text-align: center;
 }
 
 .col-1 {
