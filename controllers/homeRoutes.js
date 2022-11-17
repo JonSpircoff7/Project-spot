@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
 
   try {
     // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({limit:12, offset: 0, subQuery: false, order: [['updatedAt', 'DESC']],
+    const projectData = await Project.findAll({ limit: 30, offset: 0, subQuery: false, order: [['updatedAt', 'DESC']],
       include: [
         {
           model: User,
