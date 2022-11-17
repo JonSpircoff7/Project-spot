@@ -7,46 +7,36 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-          <a href="/profile">My Account</a>
-          |
-          <button class="no-button" id="logout">Logout</button>
+          <a href="/profile">Profile</a>
+          <button class="no-button" id="logout"><a>Logout</a></button>
         {{else}}
           <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="container-fluid mt-5 project">
+      
+     
       <!-- Rendered view -->
       <!-- Loop over each object in the projects array -->
       {{#each projects as |project|}}
-        <div class="row mb-4 project">
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">
-                {{project.name}}</h5>
-              <p class="card-description">{{project.description}}</p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{format_date
-                  project.date_created
-                }}</li>
-              <li class="list-group-item"><span
-                  class="dollar-amount"
-                >{{format_amount project.needed_funding}}</span>
-                needed!</li>
-              <li class="list-group-item">Created by
-                {{project.user.name}}</li>
-            </ul>
-            <div class="card-body">
-              <a href="#" class="card-link"><a
-                  href="/project/{{project.id}}"
-                >Card link</a></a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
+        <div class="row mb-4 card">
+            <img style="object-fit:cover" src="{{project.medium}}" class="card-img-top" alt="{{project.medium}}"/>
+            <div>
+              <div class="details">
+              <h4 class="card-title">
+                {{project.name}}</h4>
+              <p class="card-fund">Pledged: {{pledged}}</p>
+              <p class="card-fund">Goal: {{needed_funding}}</p>
+              </div>
+              <div class="center">
+              <a href="/project/{{project.id}}"
+                class="readmore">Read More</a>
+              </div>
+              </div>      
         </div>
       {{/each}}
+      </div>
     </main>
   </div>
   <footer>

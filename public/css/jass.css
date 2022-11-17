@@ -20,34 +20,45 @@ nav a {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 1px 1px 3px #00599e, 1px 2px 3px #505050, 1px 3px 3px #505050,
-    1px 4px 3px #9d9d9f, 1px 5px 5px rgba(0, 27, 91, 0.2);
-  color: #11e7dc;
+  text-shadow: 1px 1px 2px #6b6b6b, 1px 2px 2px #6b6b6b, 1px 3px 3px #6b6b6b;
+  color: #83cbbd;
 }
 /* Homepage background */
 .homepage,
 .loginpage,
 .terms {
   margin: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background: center;
+}
+/* margin: 0;
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position-y: center;
-}
+  background-position-y: center; */
 /* Homepage background image */
 .homepage {
-  background-image: url(../images/DIRECTUS.mp4);
+  background-image: url(../images/original-8bf924c0ebbd6c3f7e9ca3d80d46beca.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Loginpage and SIGNup background */
 .loginpage {
-  background-image: url(../images/original-bfd629edbc5919d3768b1f1c95e988e5.gif);
+  background-image: url(../images/Login.gif);
   background-repeat: no-repeat;
+  background-color: #1a1b1d;
+  background-size: cover;
 }
 
 /* TERMSpage background */
 .terms {
-  background-image: url(../images/terms.png);
+  background-image: url(../images/Login.gif);
   background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  
 }
 
 h1 a.title {
@@ -55,10 +66,93 @@ h1 a.title {
   text-decoration: none;
   font-size: 35px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px #3c3c3c, 1px 2px 2px #3c3c3c, 1px 3px 2px #3c3c3c,
-    1px 4px 2px #3c3c3c, 1px 5px 15px rgba(255, 255, 255, 0.2),
-    1px 5px 10px rgba(255, 255, 255, 0.2);
-  color: #e4389b;
+  text-shadow: 1px 1px 2px #3c3c3c, 1px 2px 2px #3c3c3c, 1px 3px 4px #3c3c3c, 1px 5px 10px rgb(255 255 255 / 20%);
+    color: #83cbbd;
+}
+
+.terms .card{
+  border: 2px solid black;;
+  margin: auto;
+    width: 50%;
+    height: 75%;
+    overflow-y: scroll;
+    text-align-last: center;
+    padding: 50px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3)
+}
+
+.projectcard{
+  border: 2px solid black;;
+  margin: auto;
+  width: 70%;
+  height: 75%;
+  text-align-last: center;
+  padding: 50px 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3)
+}
+.project{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+
+}
+
+.card-project{
+  width: 80%;
+}
+
+.card-project img{
+  width: 100%;
+}
+
+.row{
+  padding:0px 30px;
+}
+.project .card{
+  width: 16rem;
+  font-size: 100%;
+  background-color: rgb(255, 247, 247);
+  padding: 5px;
+  margin: 3px;
+  height:auto;
+  border-radius: 10px;
+  border: 3px solid teal;
+  box-shadow: 0px 0px 10px rgba(151, 101, 101, 0.9);
+}
+.card-title{
+  padding: 0;
+  color: #000000;
+}
+
+.readmore{
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img.card-img-top{
+  inline-size: -webkit-fill-available;
+  height: 40%;
+}
+
+.card-fund{
+  color:rgba(108, 67, 88, 0.986)
 }
 
 /**
@@ -808,16 +902,6 @@ label form [type="radio"] {
   display: inline-block;
 }
 
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container.container-fluid {
-  width: 92%;
-}
 
 /* FLEX CONTENT */
 .flex-row {
@@ -1405,3 +1489,4 @@ form .error {
   box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3);
 }
 /* -------END-------*/
+

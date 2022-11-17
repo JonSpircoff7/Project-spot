@@ -1,18 +1,37 @@
-<div>
-  <div class="card" style="width: 18rem;">
-    <img src="../public/image-1.gif" class="card-img-top" alt="..." />
+<div class="loginpage">
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+        <h1>
+        <a class="title" href="/">ProjectSpot</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+          <a href="/profile">My Account</a>
+          |
+          <button class="no-button" id="logout">Logout</button>
+        {{else}}
+          <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+  <div class="projectcard">
+    <img style="width: 750px;" src="{{medium}}" alt="..." />
     <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
+      <h2 class="card-title">{{name}}</h2>
       <p class="card-text">{{description}}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Created by {{user.name}}</li>
-      <li class="list-group-item">{{format_date date_created}}</li>
-      <li class="list-group-item">{{format_amount needed_funding}}</li>
+      <li class="list-group-item">Backers: {{backers_count}}</li>
+      <li class="list-group-item">Date Created: {{format_date date_created}}</li>
+      <li class="list-group-item">Our Goal{{format_amount needed_funding}}</li>
     </ul>
     <div class="card-body">
       <a href="#" class="card-link">Contribute </a>
       <a href="#" class="card-link">READ About</a>
     </div>
   </div>
+  </main>
+</div>
 </div>

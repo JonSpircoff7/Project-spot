@@ -3,9 +3,10 @@ const { Project, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
+
   try {
     // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
+    const projectData = await Project.findAll({limit:12,
       include: [
         {
           model: User,
@@ -72,7 +73,7 @@ router.get("/profile", withAuth, async (req, res) => {
 router.get("/login", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect("/");
     return;
   }
 
@@ -82,7 +83,7 @@ router.get("/login", (req, res) => {
 router.get("/signup", (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect("/profile");
+    res.redirect("/");
     return;
   }
 
@@ -91,11 +92,6 @@ router.get("/signup", (req, res) => {
 
 router.get("/terms", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect("/profile");
-    return;
-  }
-
   res.render("terms");
 });
 

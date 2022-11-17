@@ -16,50 +16,25 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: { type: DataTypes.STRING, allowNull: false },
-    description: { type: DataTypes.STRING },
-    needed_funding: { type: DataTypes.FLOAT, allowNull: false },
-    pledged: { type: DataTypes.INTEGER, allowNull: false },
-    currency: { type: DataTypes.STRING },
-    deadline: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    state_changed_at: {
-      type: DataTypes.DATE,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    date_created: {
-      type: DataTypes.DATE,
+    email: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
     },
-
-    launched_at: {
-      type: DataTypes.DATE,
+    password: {
+      type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      validate: {
+        len: [8],
+      },
     },
-
-    backers_count: { type: DataTypes.INTEGER, allowNull: false },
-    deadline_month: { type: DataTypes.INTEGER, allowNull: false },
-    deadline_day: { type: DataTypes.INTEGER, allowNull: false },
-    deadline_hr: { type: DataTypes.INTEGER, allowNull: false },
-    state_changed_at_yr: { type: DataTypes.INTEGER, allowNull: false },
-    state_changed_at_hr: { type: DataTypes.INTEGER, allowNull: false },
-    created_at_month: { type: DataTypes.INTEGER, allowNull: false },
-    created_at_day: { type: DataTypes.INTEGER, allowNull: false },
-    created_at_yr: { type: DataTypes.INTEGER, allowNull: false },
-    created_at_hr: { type: DataTypes.INTEGER, allowNull: false },
-    launched_at_month: { type: DataTypes.INTEGER, allowNull: false },
-    launched_at_day: { type: DataTypes.INTEGER, allowNull: false },
-    launched_at_yr: { type: DataTypes.INTEGER, allowNull: false },
-    launched_at_hr: { type: DataTypes.INTEGER, allowNull: false },
-    create_to_launch: { type: DataTypes.STRING, allowNull: false },
-    launch_to_deadline: { type: DataTypes.STRING, allowNull: false },
-    create_to_launch_days: { type: DataTypes.INTEGER, allowNull: false },
-    launch_to_deadline_days: { type: DataTypes.INTEGER, allowNull: false },
   },
   {
     hooks: {

@@ -24,21 +24,15 @@ Project.init(
     state_changed_at: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
-    created_at: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      // defaultValue: DataTypes.NOW,
-    },
-
-    launched_at: {
+    date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+
+    launched_at: {
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
@@ -61,10 +55,15 @@ Project.init(
     launch_to_deadline: { type: DataTypes.STRING, allowNull: false },
     create_to_launch_days: { type: DataTypes.INTEGER, allowNull: false },
     launch_to_deadline_days: { type: DataTypes.INTEGER, allowNull: false },
+    medium: {
+      type: DataTypes.BLOB("long"), // <- type for image ( database :postgresql )
+      allowNull: true,
+    },
   },
   {
     sequelize,
     underscored: true,
+    freezeTableName: true,
     modelName: "project",
   }
 );
