@@ -19,7 +19,6 @@ Project.init(
     deadline: {
       type: DataTypes.DATE,
       allowNull: true,
-
       defaultValue: DataTypes.NOW,
     },
     state_changed_at: {
@@ -54,6 +53,10 @@ Project.init(
     launch_to_deadline: { type: DataTypes.STRING, allowNull: true },
     create_to_launch_days: { type: DataTypes.INTEGER, allowNull: true },
     launch_to_deadline_days: { type: DataTypes.INTEGER, allowNull: true },
+    medium: {
+      type: DataTypes.BLOB("long"), // <- type for image ( database :postgresql )
+      allowNull: true,
+    },
   },
   {
     sequelize,
@@ -64,8 +67,3 @@ Project.init(
 );
 
 module.exports = Project;
-
-
-
-        
-

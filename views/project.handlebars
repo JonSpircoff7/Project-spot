@@ -1,20 +1,42 @@
-<div class="text-center">
-  <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
-    needed
-  </p>
-  <p>
-    <form action="https://www.paypal.com/donate" method="post" target="_top">
+<div class="loginpage">
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+        <h1>
+        <a class="title" href="/">ProjectSpot</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+          <a href="/profile">My Account</a>
+          |
+          <button class="no-button" id="logout">Logout</button>
+        {{else}}
+          <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+  <div class="projectcard">
+    <img style="width: 750px;" src="{{medium}}" alt="..." />
+    <div class="card-body">
+      <h2 class="card-title">{{name}}</h2>
+      <p class="card-text">{{description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Backers: {{backers_count}}</li>
+      <li class="list-group-item">Date Created: {{format_date date_created}}</li>
+      <li class="list-group-item">Our Goal{{format_amount needed_funding}}</li>
+    </ul>
+    <div class="card-body">
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
 <input type="hidden" name="business" value="VREAKV4JUKKT6" />
 <input type="hidden" name="no_recurring" value="0" />
 <input type="hidden" name="item_name" value="Donate to this project and contribute to their funding so they continue on doing great things!" />
 <input type="hidden" name="currency_code" value="USD" />
 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
 <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-  </p>
+    </div>
+  </div>
+  </main>
+</div>
 </div>

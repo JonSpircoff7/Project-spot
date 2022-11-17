@@ -1,55 +1,158 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+* {
+  font-family: Verdana;
+  box-sizing: border-box;
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
   margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
 }
-
-/**
- * Render the `main` element consistently in IE.
- */
 main {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+nav a {
+  margin: 40px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #6b6b6b, 1px 2px 2px #6b6b6b, 1px 3px 3px #6b6b6b;
+  color: #83cbbd;
+}
+/* Homepage background */
+.homepage,
+.loginpage,
+.terms {
+  margin: 0;
+  height: 100%;
+  background-repeat: no-repeat;
+  background: center;
+}
+/* margin: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position-y: center; */
+/* Homepage background image */
+.homepage {
+  background-image: url(../images/original-8bf924c0ebbd6c3f7e9ca3d80d46beca.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Loginpage and SIGNup background */
+.loginpage {
+  background-image: url(../images/Login.gif);
+  background-repeat: no-repeat;
+  background-color: #1a1b1d;
+  background-size: cover;
 }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+/* TERMSpage background */
+.terms {
+  background-image: url(../images/Login.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  
+}
+
+h1 a.title {
+  margin: 40px;
+  text-decoration: none;
+  font-size: 35px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #3c3c3c, 1px 2px 2px #3c3c3c, 1px 3px 4px #3c3c3c, 1px 5px 10px rgb(255 255 255 / 20%);
+    color: #83cbbd;
+}
+
+.terms .card{
+  border: 2px solid black;;
+  margin: auto;
+    width: 50%;
+    height: 75%;
+    overflow-y: scroll;
+    text-align-last: center;
+    padding: 50px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3)
+}
+
+.projectcard{
+  border: 2px solid black;;
+  margin: auto;
+  width: 70%;
+  height: 75%;
+  text-align-last: center;
+  padding: 50px 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3)
+}
+.project{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  width: 90%;
+  margin: auto;
+
+}
+
+.card-project{
+  width: 80%;
+}
+
+.card-project img{
+  width: 100%;
+}
+
+.row{
+  padding:0px 30px;
+}
+.project .card{
+  width: 16rem;
+  font-size: 100%;
+  background-color: rgb(255, 247, 247);
+  padding: 5px;
+  margin: 3px;
+  height:auto;
+  border-radius: 10px;
+  border: 3px solid teal;
+  box-shadow: 0px 0px 10px rgba(151, 101, 101, 0.9);
+}
+.card-title{
+  padding: 0;
+  color: #000000;
+}
+
+.readmore{
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img.card-img-top{
+  inline-size: -webkit-fill-available;
+  height: 40%;
+}
+
+.card-fund{
+  color:rgba(108, 67, 88, 0.986)
 }
 
 /**
@@ -61,372 +164,6 @@ pre {
   /* 1 */
   font-size: 1em;
   /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
-}
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
-}
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-  border-style: none;
-}
-
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-}
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input {
-  /* 1 */
-  overflow: visible;
-}
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-  /* 1 */
-  text-transform: none;
-}
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type='checkbox'],
-[type='radio'] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none;
-}
-
-/* 
-=================
-END NORMALIZE CSS
-=================
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  min-height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: 16px;
-  color: #1a1a1a;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 0.5rem;
-  line-height: 1.25;
-}
-
-h1 {
-  font-size: 2.25rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1.25rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
-p {
-  font-size: 1.1rem;
-  margin: 0 0 1rem;
-  line-height: 1.5;
-}
-
-ul,
-ol,
-dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-label {
-  display: inline-block;
-}
-
-input,
-select,
-textarea,
-button {
-  margin: 0;
-}
-
-a {
-  color: #1b89bc;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #065b83;
-  text-decoration: underline;
 }
 
 /* HEIGHT / WIDTH UTILS */
@@ -981,7 +718,8 @@ a:hover {
   outline: none;
   color: #1a1a1a;
   background-color: #aeaeae;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  background-color: 0.2s ease-in-out;
 }
 
 .btn:hover {
@@ -1154,26 +892,16 @@ form .form-input.form-input-squared {
   border-radius: 0;
 }
 
-form [type='checkbox'],
-form [type='radio'] {
+form [type="checkbox"],
+form [type="radio"] {
   display: inline-block;
 }
 
-label form [type='checkbox'], label
-form [type='radio'] {
+label form [type="checkbox"],
+label form [type="radio"] {
   display: inline-block;
 }
 
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container.container-fluid {
-  width: 92%;
-}
 
 /* FLEX CONTENT */
 .flex-row {
@@ -1254,9 +982,10 @@ form [type='radio'] {
   flex-direction: row;
   margin-left: -15px;
   margin-right: -15px;
+  justify-content: center;
 }
 
-[class*='col-'] {
+[class*="col-"] {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -1266,6 +995,7 @@ form [type='radio'] {
 .col-auto {
   flex-grow: 1;
   flex-basis: 0;
+  text-align: center;
 }
 
 .col-1 {
@@ -1703,3 +1433,62 @@ form [type='radio'] {
     align-content: center;
   }
 }
+
+/* Login and Signout CARDS*/
+.myform {
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(2, 111, 125, 0.461);
+}
+.mybtn {
+  border-radius: 10px;
+}
+
+.login-or {
+  position: relative;
+  color: #aaa;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.span-or {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -25px;
+  background-color: #fff;
+  width: 50px;
+  text-align: center;
+  background-color: transparent;
+}
+.hr-or {
+  height: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.google {
+  color: #666;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  outline: none;
+  border: 1px solid lightgrey;
+}
+form .error {
+  color: #ff0000;
+}
+#second {
+  display: none;
+}
+
+.form {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(101, 93, 93, 0.3);
+}
+/* -------END-------*/
+

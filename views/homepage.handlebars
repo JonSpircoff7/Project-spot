@@ -1,24 +1,50 @@
-<!-- Loop over each object in the projects array -->
-{{#each projects as |project| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{format_amount project.needed_funding}}</span>
-      needed!
-    </p>
-    <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
+<div class="homepage">
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a class="title" href="/">ProjectSpot</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+          <a href="/profile">Profile</a>
+          <button class="no-button" id="logout"><a>Logout</a></button>
+        {{else}}
+          <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container-fluid mt-5 project">
+      
+     
+      <!-- Rendered view -->
+      <!-- Loop over each object in the projects array -->
+      {{#each projects as |project|}}
+        <div class="row mb-4 card">
+            <img style="object-fit:cover" src="{{project.medium}}" class="card-img-top" alt="{{project.medium}}"/>
+            <div>
+              <div class="details">
+              <h4 class="card-title">
+                {{project.name}}</h4>
+              <p class="card-fund">Pledged: {{pledged}}</p>
+              <p class="card-fund">Goal: {{needed_funding}}</p>
+              </div>
+              <div class="center">
+              <a href="/project/{{project.id}}"
+                class="readmore">Read More</a>
+              </div>
+              </div>      
+        </div>
+      {{/each}}
+      </div>
+    </main>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{project.description}}
-    </p>
-  </div>
+  <footer>
+
+  </footer>
 </div>
-{{/each}}
+
+<!-- Render script for logged in users only -->
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
+{{/if}}

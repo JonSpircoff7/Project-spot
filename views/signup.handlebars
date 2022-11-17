@@ -1,0 +1,88 @@
+<div class="loginpage">
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a class="title" href="/">ProjectSpot</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+          <a href="/profile">My Account</a>
+          |
+          <button class="no-button" id="logout">Logout</button>
+        {{else}}
+          <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    {{! Main content }}
+    <main class="container container-fluid mt-5">
+      <div class="container login-bk">
+        <div class="row">
+          {{!  }}
+          <div class="col-md-5 mx-auto">
+            <div id="first myform">
+              <div class="form">
+                <div class="logo mb-3">
+                  <div class="col-md-12 text-center cardtitle">
+                    <h1>Signup</h1>
+                  </div>
+                </div>
+                <form class="signup-form form">
+                  <div class="form-group">
+                    <label for="name-signup">Enter your Name</label>
+                    <input
+                      type="text"
+                      class="form-input"
+                      id="name-signup"
+                      placeholder="Enter you name..."
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email-signup">Email address</label>
+                    <input
+                      type="email"
+                      class="form-input"
+                      id="email-signup"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password-signup">Password</label>
+                    <input
+                      class="form-input"
+                      type="password"
+                      id="password-signup"
+                      placeholder="Enter your password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <p class="text-center">By signing up you accept our
+                      <a href="./terms">Terms Of Use</a></p>
+                  </div>
+
+                  <div class="form-group col-md-12 text-center mb-3">
+                    <button
+                      type="submit"
+                      class="btn btn-block mybtn btn-primary tx-tfm"
+                    >Get Started For Free</button>
+                  </div>
+                  <div class="col-md-12">
+                    <div>
+                      <p class="text-center"><a href="./login">Already have an
+                          account?</a>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+<script src="./js/signup.js"></script>

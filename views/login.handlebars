@@ -1,42 +1,86 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Login</h2>
-
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">email:</label>
-        <input class="form-input" type="text" id="email-login" />
+<div class="loginpage">
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+        <h1>
+        <a class="title" href="/">ProjectSpot</a>
+      </h1>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+          <a href="/profile">My Account</a>
+          |
+          <button class="no-button" id="logout">Logout</button>
+        {{else}}
+          <a href="/login">Login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      <!-- Rendered view -->
+      <div class="container login-bk">
+        <div class="row">
+          <div class="col-md-5 mx-auto">
+            <div id="first myform">
+              <div class="form">
+                <div class="logo mb-3">
+                  <div class="col-md-12 text-center cardtitle">
+                    <h1>Login</h1>
+                  </div>
+                </div>
+                <form class="form login-form">
+                  <div class="form-group">
+                    <label for="email-login">Email address</label>
+                    <input
+                      type="email"
+                      class="form-input"
+                      id="email-login"
+                      placeholder="Enter email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password-login">Password</label>
+                    <input
+                      type="password"
+                      id="password-login"
+                      class="form-input"
+                      placeholder="Enter Password"
+                    />
+                  </div>
+                  <div class="col-md-12 text-center">
+                    <button
+                      type="submit"
+                      class="btn btn-block mybtn btn-primary tx-tfm"
+                    >Login</button>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="login-or">
+                      <hr class="hr-or" />
+                      <span class="span-or">or</span>
+                    </div>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <p class="text-center">
+                      <a
+                        href="
+                      "
+                        class="google btn mybtn"
+                      ><i class="fa fa-google-plus">
+                        </i>
+                        Signup using Google
+                      </a>
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-center">Don't have account?
+                      <a href="./signup">Sign up here</a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6">
-    <h2>Signup</h2>
-
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
+    </main>
   </div>
 </div>
-
 <script src="./js/login.js"></script>
