@@ -59,13 +59,36 @@ Project.init(
       type: DataTypes.BLOB("long"), // <- type for image ( database :postgresql )
       allowNull: true,
     },
+    backers_count: { type: DataTypes.INTEGER, allowNull: true },
+    deadline_month: { type: DataTypes.INTEGER, allowNull: true },
+    deadline_day: { type: DataTypes.INTEGER, allowNull: true },
+    deadline_hr: { type: DataTypes.INTEGER, allowNull: true },
+    state_changed_at_yr: { type: DataTypes.INTEGER, allowNull: true },
+    state_changed_at_hr: { type: DataTypes.INTEGER, allowNull: true },
+    created_at_month: { type: DataTypes.INTEGER, allowNull: true },
+    created_at_day: { type: DataTypes.INTEGER, allowNull: true },
+    created_at_yr: { type: DataTypes.INTEGER, allowNull: true },
+    created_at_hr: { type: DataTypes.INTEGER, allowNull: true },
+    launched_at_month: { type: DataTypes.INTEGER, allowNull: true },
+    launched_at_day: { type: DataTypes.INTEGER, allowNull: true },
+    launched_at_yr: { type: DataTypes.INTEGER, allowNull: true },
+    launched_at_hr: { type: DataTypes.INTEGER, allowNull: true },
+    create_to_launch: { type: DataTypes.STRING, allowNull: true },
+    launch_to_deadline: { type: DataTypes.STRING, allowNull: true },
+    create_to_launch_days: { type: DataTypes.INTEGER, allowNull: true },
+    launch_to_deadline_days: { type: DataTypes.INTEGER, allowNull: true },
   },
   {
     sequelize,
-    underscored: true,
     freezeTableName: true,
+    underscored: true,
     modelName: "project",
   }
 );
 
 module.exports = Project;
+
+
+
+        
+
