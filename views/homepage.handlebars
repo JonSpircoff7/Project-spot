@@ -1,19 +1,29 @@
 <div class="homepage">
+
   <div class="flex-column justify-space-around">
+  
     <header class="display-flex justify-space-between align-center p-2">
+    
       <h1>
         <a class="title" href="/">ProjectSpot</a>
       </h1>
+      
       <nav>
+      
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
+        
           <a href="/profile">Profile</a>
           <button class="no-button" id="logout"><a>Logout</a></button>
+          
         {{else}}
           <a href="/login">Login</a>
         {{/if}}
+        
       </nav>
+      
     </header>
+    
     <main class="container-fluid mt-5 project">
       
      
@@ -21,24 +31,42 @@
       <!-- Loop over each object in the projects array -->
       {{#each projects as |project|}}
         <div class="row mb-4 card">
+        
             <img style="object-fit:cover" src="{{project.medium}}" class="card-img-top" alt="{{project.medium}}"/>
+            
             <div>
+            
               <div class="details">
+              
               <h4 class="card-title">
-                {{project.name}}</h4>
+                {{project.name}}
+              </h4>
+              
               <p class="card-fund">Pledged: {{pledged}}</p>
               <p class="card-fund">Goal: {{needed_funding}}</p>
+              
               </div>
+              
               <div class="center">
+              
               <a href="/project/{{project.id}}"
-                class="readmore">Read More</a>
+                class="readmore">Read More
+              </a>
+              
               </div>
-              </div>      
+              
+              </div>    
+              
         </div>
+        
       {{/each}}
+      
       </div>
+      
     </main>
+    
   </div>
+  
   <footer>
 
   </footer>
